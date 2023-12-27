@@ -1,0 +1,27 @@
+name: mpaoc
+version: 0.0.0.1
+language: GHC2021
+synopsis: Parser for Advent of Code inputs using MegaParsec
+ 
+ghc-options: -Wall
+default-extensions:
+  - QuasiQuotes
+
+dependencies:
+  - base
+  - containers
+  - megaparsec
+  - raw-strings-qq
+  - hspec
+  - hspec-megaparsec
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Y15
+    - Y23
+
+executables:
+  mpaoc:
+    main: Main.hs
+    dependencies: mpaoc
